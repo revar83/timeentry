@@ -1,12 +1,16 @@
 import './App.css';
-import Invoice from './component/Invoice';
+import ProjectTimeEntry from './component/ProjectTimeEntry';
 // import Search from './component/Search';
-
+import { Provider } from "react-redux";
+import store from "./store";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Invoice/>
+      <Provider store={store}>
+
+        <ProjectTimeEntry/>
+        </Provider>
       </header>
     </div>
   );
